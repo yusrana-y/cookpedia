@@ -54,22 +54,22 @@
         <div class="col-lg-1"></div>
         <div class="col-lg-4">
 
-            <div class="border shadow p-5">
+            <form (ngSubmit)="submitTestimony()" [formGroup]="testimonyForm" class="border shadow p-5">
                 <h3>Client Testimony</h3>
                 <div class="mb-3 mt-5">
-                    <input type="text" name="" id="" placeholder="Name" class="form-control">
+                    <input type="text" name="name" formControlName="name" id="" placeholder="Name" class="form-control">
                 </div>
                 <div class="mb-3">
-                    <input type="text" name="" id="" placeholder="Email" class="form-control">
+                    <input type="text" name="email" formControlName="email" id="" placeholder="Email" class="form-control">
                 </div>
                 
                 <div class="mb-3">
-                    <textarea name="" id="" placeholder="Messages" class="form-control"></textarea>
+                    <textarea name="message" formControlName="message" id="" placeholder="Messages" class="form-control"></textarea>
                 </div>
                
                 <p class="mt-4">By submitting, you agree to the terms and condition of our website. We may use our details on our site.</p>
-                <button class="btn btn-success float-end">Submit</button>
-            </div>
+                <button type="submit" class="btn btn-success float-end">Submit</button>
+            </form>
         </div>
         <div class="col-lg-1"></div>
     </div>
